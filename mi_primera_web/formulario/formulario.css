@@ -1,0 +1,232 @@
+body{
+    height: 100%;
+    background-color: rgb(188, 210, 250);
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(247, 172, 243);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+header a i{
+    color: blueviolet;
+    font-size: 3em;
+    padding: 0.5em;
+}
+
+header nav ul{
+    display: flex;
+    gap: 1.1em;
+    margin-right: 3em;
+    font-family: "Agdasima", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 120%;
+}
+
+header nav ul li a{
+    color: blueviolet;
+}
+
+.main-content {
+    min-height: 100vh; /* Asegura que el contenido cubra toda la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+.form_contenedor {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    min-height: 70vh;        /* Ajusta la altura mínima del contenedor */
+}
+
+.titulo_seccion {
+    position: relative;
+    font-size: 40px;
+    color: #003750;
+    text-align: center;
+}
+
+.formulario_contenedor {
+    max-width: 500px;        /* Ajusta el ancho del formulario */
+    margin: 0 auto;          /* Centrar el formulario horizontalmente */
+    padding: 20px;           /* Espacio interno alrededor del formulario */
+    background-color: #fff;  /* Fondo del formulario */
+    border: 1px solid #ccc;  /* Borde */
+    border-radius: 10px;     /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.formulario_contenedor label {
+    display: block; /* Para que cada etiqueta esté en su propia línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espacio entre cada input */
+}
+label {
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: XX; /* Define el ancho máximo del input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente el textarea */
+}
+
+.formulario_contenedor input, .formulario_contenedor textarea {
+    width: 100%; /* Asegura que los campos de texto ocupen todo el ancho */
+    padding: 8px;
+    margin-bottom: 10px; /* Espacio entre los campos */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario_contenedor button {
+    background-color: #007bff; /* Color azul */
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario_contenedor button:hover {
+    background-color: #0056b3; /* Color azul más oscuro al pasar el mouse */
+}
+
+footer {
+    background-color: rgb(247, 172, 243);
+    width: 100%;
+    margin-top: 50px;
+}
+    
+#footer {
+    padding: 1em;
+}
+
+footer nav ul{
+    padding: 0;
+}
+    
+footer a {
+    text-decoration: none;
+    color: rgb(94, 42, 206);
+}
+    
+#footer h3 {
+    color: rgb(144, 32, 189);
+}
+    
+a i.fa-solid.fa-shield-cat {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2em;
+}
+
+/* MENU */
+#check {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: rgb(114, 62, 163);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+
+.checkbtn {
+    display: block;
+}
+    
+#encabezado ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(18, 18, 89);
+    text-align: center;
+    top: 80px;
+    left: 100%;
+    transition: all 0.5s;
+}
+    
+#check:checked ~ ul {
+    left: 0;
+    display: block;
+    }
+    
+#encabezado nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+    
+#encabezado nav ul li a {
+    font-size: 20px;
+}
+    
+#check:checked ~ .checkbtn {
+    color: rgb(41, 41, 114);
+}
+
+footer {
+    padding: 1em;
+}
+
+#footer h3 {
+    font-size: 16px; /* Reduce el tamaño del encabezado */
+    margin-bottom: 10px; /* Añade espacio debajo del título */
+}
+
+footer nav ul {
+    display: block; /* Los elementos del menú se apilan verticalmente */
+}
+
+footer nav ul li {
+    margin: 10px 0; /* Añade más espacio entre los elementos del menú */
+}
+
+footer a {
+    font-size: 14px; /* Reduce el tamaño del texto para que sea legible */
+}
+
+#footer {
+    padding: 0.5em; /* Reduce el relleno del footer en móviles */
+}
+}
